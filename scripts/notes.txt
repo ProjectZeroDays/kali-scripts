@@ -15,7 +15,6 @@ apt-get install nvidia-kernel-dkms
 sed 's/quiet/quiet nouveau.modeset=0/g' -i /etc/default/grub
 update-grub
 apt-get install nvidia-opencl-icd
-apt-get --reinstall install nvidia-driver bumblebee-nvidia
 reboot
 glxinfo | grep -i "direct rendering"
 ##should output - direct rendering: Yes
