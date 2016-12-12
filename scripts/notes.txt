@@ -17,7 +17,7 @@ update-grub
 apt-get install nvidia-opencl-icd
 reboot
 glxinfo | grep -i "direct rendering"
-##should output - direct rendering: Yes
+##should output - direct rendering: Yes (if not run "apt-get --reinstall install nvidia-driver bumblebee-nvidia" and "reboot")
 
 #sound
 apt-get install alsa-utils alsamixergui
