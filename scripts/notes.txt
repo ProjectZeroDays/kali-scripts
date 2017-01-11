@@ -120,6 +120,7 @@ make oclvanitygen
 ./oclvanitygen -D 0:0 -o Address.txt -i 1337Hax
 
 #####Equihash-Nicehash-Zcash-Miner#####
+Write up showing tmux implementation: https://legacysecuritygroup.com/index.php/projects/recent/12-software/36-nicehash-eqm-miner-equihash-zcash-on-kali
 cd ~/Downloads
 wget https://www.nicehash.com/tools/eqm_v1.0.4c_Linux_Ubuntu16.zip
 unzip eqm_v1.0.4c_Linux_Ubuntu16.zip
