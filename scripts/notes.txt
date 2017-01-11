@@ -121,10 +121,10 @@ make oclvanitygen
 
 #####Equihash-Nicehash-Zcash-Miner#####
 cd ~/Downloads
-wget https://www.nicehash.com/tools/eqm_v1.0.4c_Linux_Ubuntu14.zip
-unzip eqm_v1.0.4c_Linux_Ubuntu14.zip
-cd eqm_v1.0.4c_Linux_Ubuntu14
-./eqm* -l [LOCATION, set as usa, eu, jp] -t 4 -u [YOUR-BTC-ADDRESS] -w [WORKER-NAME] -cd [GPUs,set as 0 0 or 0 0 1 1]
+wget https://www.nicehash.com/tools/eqm_v1.0.4c_Linux_Ubuntu16.zip
+unzip eqm_v1.0.4c_Linux_Ubuntu16.zip
+cd eqm_v1.0.4c_Linux_Ubuntu16
+./eqm_ubuntu_16 -l [LOCATION, set as usa, eu, jp] -t 4 -u [YOUR-BTC-ADDRESS] -w [WORKER-NAME] -cd [GPUs,set as 0 0 or 0 0 1 1]
 #automatic boot on startup and when crashing
 
 ###Start systemd config file
@@ -136,7 +136,7 @@ Documentation=man:syslog-ng(8)
 [Service]
 User=root
 Type=forking
-ExecStart=/PATH-TO-EQM/eqm/eqm_ubuntu_14 -l usa -t 0 -u BTC-ADDRESS -w zcashminer -cd 0 0
+ExecStart=/PATH-TO-EQM/eqm/eqm_ubuntu_16 -l usa -t 0 -u BTC-ADDRESS -w zcashminer -cd 0 0
 StandardOutput=null
 Restart=always
 RestartSec=3
