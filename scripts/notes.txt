@@ -18,6 +18,9 @@ apt-get install nvidia-opencl-icd
 reboot
 glxinfo | grep -i "direct rendering"
 ##should output - direct rendering: Yes (if not run "apt-get --reinstall install nvidia-driver bumblebee-nvidia" and "reboot")
+If error occurs press CTRL+ALT+F2 login and install bumblebee or correct error.
+update-alternatives --config x-session-manager
+Choose /usr/bin/startxfce4 to set xfce as default
 
 #sound
 apt-get install alsa-utils alsamixergui
