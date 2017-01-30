@@ -6,6 +6,9 @@ apt-get upgrade
 apt-get dist-upgrade
 apt-get install kali-linux-full
 
+#office
+apt-get install libreoffice
+
 #version management
 apt-get install git
 
@@ -21,6 +24,7 @@ glxinfo | grep -i "direct rendering"
 If error occurs press CTRL+ALT+F2 login and install bumblebee or correct error.
 update-alternatives --config x-session-manager
 Choose /usr/bin/startxfce4 to set xfce as default
+apt-get install nvidia-opencl-dev nvidia-modprobe
 
 #sound
 apt-get install alsa-utils alsamixergui
@@ -155,3 +159,12 @@ systemctl enable eqm.service
 systemctl start eqm.service
 
 #####END Equihash-Nicehash-Zcash-Miner#####
+
+
+##Fix Error "error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory"
+#on 64bit OS
+wget http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb
+dpkg -i libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb
+
+#Install Cuda 8.0 runtime for Nvidia
+apt-get install libcudart8.0
