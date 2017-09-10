@@ -1,0 +1,35 @@
+#!/bin/bash
+
+### BEGIN INIT INFO
+# Provides:          macchanger
+# Required-Start:    $network $syslog
+# Required-Stop:     $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Changes the MAC address at boot time.
+# Description:       Changes the ethernet and wireless cards MAC addresses
+#                    that begins with a real manufacturers MAC (the first 3
+#                    segments) and randomize the next 3 segments. 
+### END INIT INFO
+
+
+# Disable the network devices
+ifconfig eth0 down
+ifconfig wlan0 down
+ifconfig wlan1 down
+
+# Spoof the mac addresses
+/usr/bin/macchanger -A eth0
+/usr/bin/macchanger -A wlan0
+/usr/bin/macchanger -A wlan1
+
+
+# Re-enable the devices
+ifconfig eth0 up
+ifconfig wlan0 up
+ifconfig wlan1 up
+
+# Restart Network-Manager
+service network-manager restart
+
+exit 0
