@@ -2,6 +2,10 @@
 #chmod +x volume.sh
 #./volume.sh 100
 #./volume.sh 0
+#or link to whatever directory script is in
+#ln -s /root/Apps/kali-scripts/volume /usr/bin/volume
+#then run from anywhere
+#volume 100
 #be sure you went through steps to enable sound first as Kali ships with it disabled
 if [ "$1" != "" ]; then
   volume=$1
