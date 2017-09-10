@@ -1,4 +1,5 @@
 #!/bin/bash
+#apt-get install alsa-utils
 #chmod +x volume.sh
 #./volume.sh 100
 #./volume.sh 0
