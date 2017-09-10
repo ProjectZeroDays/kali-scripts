@@ -3,6 +3,7 @@
 #./volume.sh 100
 #./volume.sh 0
 #or link to whatever directory script is in
+#mv volume.sh volume
 #ln -s /root/Apps/kali-scripts/volume /usr/bin/volume
 #then run from anywhere
 #volume 100
