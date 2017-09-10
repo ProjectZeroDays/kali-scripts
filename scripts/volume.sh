@@ -1,4 +1,7 @@
 #!/bin/bash
+#chmod +x volume.sh
+#./volume.sh 100
+#./volume.sh 0
 #be sure you went through steps to enable sound first as Kali ships with it disabled
 if [ "$1" != "" ]; then
   volume=$1
