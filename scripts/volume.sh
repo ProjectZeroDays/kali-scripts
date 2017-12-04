@@ -19,4 +19,5 @@ else
   read -e -i $defaultvolume -p 'Please Enter Volume 0-100: ' volume
 fi
 amixer sset Master $volume'%' on
+amixer sset Headphone $volume'%' on
 xset b off
